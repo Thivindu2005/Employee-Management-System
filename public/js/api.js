@@ -1,9 +1,11 @@
 // ---------- API settings ----------
 // When the site is opened from the server (http://localhost:3000 or your deployed URL),
 // the API lives at the same address, so '/api' is enough.
-// If you open the HTML files directly (file://) there is no server, so the app uses demo mode.
+// If you open the HTML files directly (file://) or from GitHub Pages (*.github.io) there is no API server,
+// so the app uses demo mode (data is kept in the browser only).
 // To use an API on a different address, put its full URL here, e.g. 'https://my-api.onrender.com/api'.
-const API_BASE = location.protocol === 'file:' ? 'https://your-api-domain.com/api' : '/api';
+const NO_SERVER = location.protocol === 'file:' || location.hostname.endsWith('github.io');
+const API_BASE = NO_SERVER ? 'https://your-api-domain.com/api' : '/api';
 const HEADERS = { 'Content-Type': 'application/json' };
 
 // While the URL is still the placeholder, the app runs in demo mode
