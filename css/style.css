@@ -125,3 +125,34 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .blob { animation: none; }
 }
+
+/* ---------- dashboard ---------- */
+.text-soft { color: var(--ink-soft); }
+.app-wrap { position: relative; z-index: 1; max-width: 1150px; margin: 0 auto; padding: 24px 18px 50px; }
+
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 22px; border-radius: 20px; margin-bottom: 22px; }
+.glass-btn.ghost { width: auto; margin: 0; padding: 9px 18px; color: var(--ink); background: rgba(255,255,255,0.12); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }
+.panel-head .glass-btn, .modal-footer .glass-btn { width: auto; margin: 0; padding: 12px 22px; }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 22px; }
+.stat { padding: 20px 22px; border-radius: 22px; display: flex; flex-direction: column; gap: 6px; }
+.stat span { color: var(--ink-soft); font-size: 0.9rem; }
+.stat b { font-size: 1.9rem; font-weight: 600; }
+
+.panel { padding: 22px; }
+.panel-head { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.panel-head input { flex: 1 1 240px; width: auto; }
+.panel-head select { flex: 0 0 160px; width: auto; }
+
+.glass-table { --bs-table-bg: transparent; --bs-table-color: var(--ink); --bs-table-border-color: rgba(255,255,255,0.15); margin: 0; }
+.glass-table th { color: var(--ink-soft); font-weight: 500; }
+.glass-table td, .glass-table th { background: transparent; }
+.row-btn { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: var(--ink); border-radius: 10px; padding: 4px 12px; font-size: 0.85rem; margin-left: 6px; }
+.row-btn:hover { background: rgba(255,255,255,0.22); }
+.row-btn.del:hover { background: rgba(255,90,110,0.4); }
+.empty { text-align: center; color: var(--ink-soft); padding: 30px 0; }
+
+.modal-content.glass { color: var(--ink); }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 4px 18px; }
+.form-grid label { margin-top: 10px; }
+select.glass-input option { color: #111; }
